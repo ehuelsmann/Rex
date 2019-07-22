@@ -4,6 +4,17 @@ perl:
   - "5.30"
   - "5.22"
   - "5.10"
+services:
+  - mysql
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - libmysqlclient-dev
+      - mysql-client-5.5
+      - mysql-common
+      - mysql-server-5.5
 cache:
   apt: true
   directories:
