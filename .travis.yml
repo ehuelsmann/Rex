@@ -7,7 +7,7 @@ perl:
 sudo: false
 before_install:
   - cpanm --quiet --notest Perl::Critic
-  # - perlcritic --quiet --single-policy=RequireTidyCode bin
+  - perlcritic --single-policy=RequireTidyCode bin
 install:
   - dzil authordeps --missing | cpanm --quiet --notest
   - dzil listdeps --missing | cpanm --quiet --notest
